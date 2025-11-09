@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #ffd1dc, #ffb3d9, #c3aed6, #ffd9e8);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 30px 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #ff6b9d;
+            margin-bottom: 10px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .media-item {
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .media-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .media-container {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background: #f0f0f0;
+        }
+
+        .media-container img,
+        .media-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .caption {
+            text-align: center;
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+            padding: 0 10px;
+        }
+
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: float 4s ease-in infinite;
+            opacity: 0;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-10px); }
+        }
+
+        @keyframes float {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 40px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border: 3px solid #ff6b9d;
+        }
+
+        .message-box h3 {
+            color: #d63384;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .message-box p {
+            color: #333;
+            font-size: 1.05em;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .message-box strong {
+            color: #d63384;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #ff6b9d;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Happy Birthday! 🎂</h1>
+            <p>สุขสันต์วันเกิดนะน้ำ ❤️</p>
+        </div>
+
+        <div class="media-item">
+            <div class="media-container">
+                <img src="./img/nam.jpg" alt="Birthday Image 1">
+            </div>
+            <div class="caption">
+                รูปนี้ใครอะ น่ารักมากๆๆ 🎈<br>
+                รักน้ำที่สุดในโลกเลย
+            </div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-container">
+                <img src="" alt="Birthday Image 2">
+            </div>
+            <div class="caption">
+               รูปนี้ก็สวยน้าา  🌟<br>
+                เป็นที่รักของแม่ด้วยน้าา
+            </div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-container">
+                <video controls poster="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop">
+                    <source src="" type="video/mp4">
+                    อัปโหลดวิดีโอของคุณที่นี่
+                </video>
+            </div>
+            <div class="caption">
+                ช่วงเวลาดีๆ ที่เราได้ใช้ด้วยกัน 💕<br>
+                ขอให้มีช่วงเวลาดีๆ แบบนี้ตลอดไปนะ
+            </div>
+        </div>
+
+        <div class="message-box">
+            <h3>💌 ข้อความถึงน้ำคนพิเศษของธี</h3>
+            <p>
+                วันนี้เป็นวันเกิดใครน้า ของน้ำรึป่าวน้าา ถ้าใช่ก็ยินดีด้วยนะน้ำแกโตขึ้นอีกปีแล้วน้าา เป็นไงบ้างเหนื่อยมั้ยตลอดเส้นทางที่เดินผ่านมา แต่ไม่ต้องห่วงนะแกก็รู้เค้าอยู่ข้างแกตลอดนะเด็กอ้วน
+                ขอให้เป็นปีที่ดีตลอดนะ เค้าขอโทษด้วยนะที่ทำตัวงี่เง่าไปบ้าง ทำให้แกไม่สบายใจหลายๆอย่าง ขอบคุณนะที่อยู่ข้างกันในวันที่มืดมน
+                <br><br>
+                วันเกิดปีนี้ ขอให้น้ำมีความสุขมากๆนะ ร่างกายเเข็งแรง ปราศจากโรคภัยนะ ได้ที่ฝึกงานดีๆ เป็นที่รักของเพื่อนๆ และของครอบครัวนะ และของเค้าด้วย>_<
+                <br><br>
+                รักแกมากที่สุดในโลกเลยนะ และจะรักตลอดไป ❤️
+                <br><br>
+                <strong>สุขสันต์วันเกิดนะน้ำ 🎂✨</strong>
+            </p>
+        </div>
+
+        <div class="footer">
+            🎁 I Love You Forever 💖
+        </div>
+    </div>
+
+    <script>
+        // สร้างหัวใจลอยขึ้น
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            heart.style.fontSize = (Math.random() * 10 + 15) + 'px';
+            document.getElementById('hearts').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        // สร้างหัวใจทุกๆ 300ms
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
